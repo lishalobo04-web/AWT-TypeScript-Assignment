@@ -1,0 +1,108 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+header {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    padding: 22px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px #0000000d;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+input, select, button {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+input {
+    flex: 1;
+    min-width: 150px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#productList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.product-card {
+    border: 1px solid #e2e8f0;
+    padding: 18px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.product-card h3 {
+    margin-top: 0;
+}
+
+.available {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.unavailable {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.product-card button {
+    background: #dc2626;
+}
+
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+    }
+
+    input, select, form button {
+        width: 100%;
+    }
+}

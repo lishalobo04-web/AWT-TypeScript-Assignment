@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="dist/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Inventory Manager</h1>
+        <p>Manage your products and track stock availability.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add a Product</h2>
+            <form id="addForm">
+                <input id="productName" type="text"
+                    placeholder="Product name" required>
+                <input id="productPrice" type="number"
+                    placeholder="Price" min="0.01" step="0.01" required>
+
+                <select id="productStock">
+                    <option value="yes">In stock</option>
+                    <option value="no">Out of stock</option>
+                </select>
+
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Inventory</h2>
+            <input id="searchInput" type="search"
+                placeholder="Search products">
+
+            <select id="stockFilter">
+                <option value="all">All products</option>
+                <option value="available">In stock</option>
+                <option value="out">Out of stock</option>
+            </select>
+
+            <p>Total products: <strong id="totalCount">0</strong></p>
+            <p>Available products: <strong id="availableCount">0</strong></p>
+
+            <button id="discountBtn" type="button">Apply 10% Discount</button>
+
+            <div id="productList"></div>
+        </section>
+    </main>
+</body>
+</html>
